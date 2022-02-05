@@ -57,6 +57,15 @@ impl QuadColors {
         }
     }
 
+    pub fn new_top_bottom(top: Rgb, bottom: Rgb) -> Self {
+        Self {
+            top_left: top,
+            top_right: top,
+            bottom_left: bottom,
+            bottom_right: bottom,
+        }
+    }
+
     pub fn top_left(&self) -> Rgb {
         self.top_left
     }
