@@ -1,4 +1,5 @@
 // NOTE: Very temp, think about it better later
+#[derive(Debug, Clone, Copy)]
 pub struct Rgb {
     r: f32,
     g: f32,
@@ -24,5 +25,40 @@ impl Rgb {
 
     pub fn blue(&self) -> f32 {
         self.b
+    }
+}
+
+#[derive(Debug, Clone, Copy)]
+pub struct QuadColors {
+    top_left: Rgb,
+    top_right: Rgb,
+    bottom_left: Rgb,
+    bottom_right: Rgb,
+}
+
+impl QuadColors {
+    pub fn new(top_left: Rgb, top_right: Rgb, bottom_left: Rgb, bottom_right: Rgb) -> Self {
+        Self {
+            top_left,
+            top_right,
+            bottom_left,
+            bottom_right,
+        }
+    }
+
+    pub fn top_left(&self) -> Rgb {
+        self.top_left
+    }
+
+    pub fn top_right(&self) -> Rgb {
+        self.top_right
+    }
+
+    pub fn bottom_left(&self) -> Rgb {
+        self.bottom_left
+    }
+
+    pub fn bottom_right(&self) -> Rgb {
+        self.bottom_right
     }
 }
