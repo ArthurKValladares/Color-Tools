@@ -1,9 +1,20 @@
 // NOTE: Very temp, think about it better later
-#[derive(Debug, Clone, Copy)]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct Rgb {
     r: f32,
     g: f32,
     b: f32,
+}
+
+impl Default for Rgb {
+    fn default() -> Self {
+        Self {
+            r: 1.,
+            g: 1.,
+            b: 1.,
+        }
+    }
 }
 
 impl Rgb {
