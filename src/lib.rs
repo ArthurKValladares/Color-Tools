@@ -39,7 +39,7 @@ impl Rgb {
     }
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Default, Clone, Copy)]
 pub struct QuadColors {
     top_left: Rgb,
     top_right: Rgb,
