@@ -41,6 +41,10 @@ impl Rgb {
     pub fn to_array(self) -> [f32; 3] {
         [self.r, self.g, self.b]
     }
+
+    pub fn to_rgba_array(self) -> [f32; 4] {
+        [self.r, self.g, self.b, 1.0]
+    }
 }
 
 #[derive(Debug, Default, Clone, Copy)]
